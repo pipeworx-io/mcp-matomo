@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-matomo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for matomo",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-9a3250a90afcc2462e4e4739d575b76da89673dafc1f469d4693665e66044209",
-    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
+    "sourceHash": "v1-0bf3cd3e061cd104e5ee08828fb7a55614a4804daa2bb045f8ed0d7026337e87",
+    "sourceCommit": "6182c4cfebddb94950e060b5d2fca18f18ad1aca"
   }
 }
