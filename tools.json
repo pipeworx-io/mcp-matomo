@@ -1,0 +1,200 @@
+[
+  {
+    "name": "matomo_visit_summary",
+    "description": "Return Matomo visits, unique visitors, actions, bounce rate, visit duration, and conversions for a site and period. Answers how traffic volume and engagement changed.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Matomo read-only auth token"
+        },
+        "_baseUrl": {
+          "type": "string",
+          "description": "HTTPS Matomo installation URL, such as https://example.matomo.cloud/"
+        },
+        "site_id": {
+          "type": "number",
+          "description": "Matomo website ID"
+        },
+        "period": {
+          "type": "string",
+          "enum": [
+            "day",
+            "week",
+            "month",
+            "year",
+            "range"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Date, relative date, or range such as 2026-07-01,2026-07-31"
+        },
+        "segment": {
+          "type": "string",
+          "description": "Optional Matomo segment expression"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "_baseUrl",
+        "site_id",
+        "period",
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "matomo_referrer_breakdown",
+    "description": "Return bounded Matomo acquisition categories, sources, visits, actions, bounce rate, conversions, and revenue. Answers which channels and referrers drove valuable traffic.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Matomo read-only auth token"
+        },
+        "_baseUrl": {
+          "type": "string",
+          "description": "HTTPS Matomo installation URL, such as https://example.matomo.cloud/"
+        },
+        "site_id": {
+          "type": "number",
+          "description": "Matomo website ID"
+        },
+        "period": {
+          "type": "string",
+          "enum": [
+            "day",
+            "week",
+            "month",
+            "year",
+            "range"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Date, relative date, or range such as 2026-07-01,2026-07-31"
+        },
+        "segment": {
+          "type": "string",
+          "description": "Optional Matomo segment expression"
+        },
+        "limit": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "_apiKey",
+        "_baseUrl",
+        "site_id",
+        "period",
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "matomo_page_performance",
+    "description": "Return bounded Matomo page URLs with views, unique views, entrances, exits, bounce rate, and time on page. Answers which content attracts, engages, or loses visitors.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Matomo read-only auth token"
+        },
+        "_baseUrl": {
+          "type": "string",
+          "description": "HTTPS Matomo installation URL, such as https://example.matomo.cloud/"
+        },
+        "site_id": {
+          "type": "number",
+          "description": "Matomo website ID"
+        },
+        "period": {
+          "type": "string",
+          "enum": [
+            "day",
+            "week",
+            "month",
+            "year",
+            "range"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Date, relative date, or range such as 2026-07-01,2026-07-31"
+        },
+        "segment": {
+          "type": "string",
+          "description": "Optional Matomo segment expression"
+        },
+        "limit": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "_apiKey",
+        "_baseUrl",
+        "site_id",
+        "period",
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "matomo_goal_performance",
+    "description": "Return Matomo goal conversions, conversion rates, and revenue for a site and period. Answers which configured outcomes produced conversions and value.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Matomo read-only auth token"
+        },
+        "_baseUrl": {
+          "type": "string",
+          "description": "HTTPS Matomo installation URL, such as https://example.matomo.cloud/"
+        },
+        "site_id": {
+          "type": "number",
+          "description": "Matomo website ID"
+        },
+        "period": {
+          "type": "string",
+          "enum": [
+            "day",
+            "week",
+            "month",
+            "year",
+            "range"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Date, relative date, or range such as 2026-07-01,2026-07-31"
+        },
+        "segment": {
+          "type": "string",
+          "description": "Optional Matomo segment expression"
+        },
+        "goal_id": {
+          "type": "number",
+          "description": "Optional goal ID; omit for all goals"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "_baseUrl",
+        "site_id",
+        "period",
+        "date"
+      ]
+    }
+  }
+]
